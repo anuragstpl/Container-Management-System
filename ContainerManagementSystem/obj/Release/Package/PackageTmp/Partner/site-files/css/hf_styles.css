@@ -1,0 +1,41 @@
+.bg_slider{display:none;}
+.slider{display:none;} .copy{font-size:12px;}
+
+
+
+#back-to-top {
+  position: fixed;
+  bottom: 10px;
+  right: 0%;
+  float: right !important;
+z-index:1000;
+}
+	#back-to-top a{
+		text-align:center;
+		text-decoration:none;
+		color:#d1d1d1;
+		display:block;
+		width:80px;
+		/*??CSS3??transition?????????????????*/
+		-moz-transition:color 1s; 
+		-webkit-transition:color 1s;
+		-o-transition:color 1s;
+	}
+	#back-to-top a:hover{
+		color:#979797;
+	}
+	/*#back-to-top a span{
+		background:#d1d1d1;
+		border-radius:6px;
+		display:block;
+		height:80px;
+		width:80px;
+		background:#d1d1d1 url('http://content.onlineagency.com/sites/15101/images/arrow-up.png') no-repeat center center;
+		margin-bottom:5px;
+		-moz-transition:background 1s;
+		-webkit-transition:background 1s;
+		-o-transition:background 1s;
+	}
+	#back-to-top a:hover span{
+		background:#979797 url('http://content.onlineagency.com/sites/15101/images/arrow-up.png') no-repeat center center;
+	}*/

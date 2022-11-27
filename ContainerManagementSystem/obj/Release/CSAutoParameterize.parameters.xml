@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="ContainerConnectionString-Web.config Connection String" description="ContainerConnectionString Connection String used in web.config by the application to access the database." defaultValue="Server=tcp:contserverdb.database.windows.net,1433;Initial Catalog=contdb;Persist Security Info=False;User ID=contadmin;Password=contpass@123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="E:\\Student\ Jobs\\DotNet\\Container\ Management\ System\\TP037785\\ContainerManagementSystem\\ContainerManagementSystem\\ContainerManagementSystem\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ContainerConnectionString']/@connectionString" />
+  </parameter>
+  <parameter name="ContainerEntities-Web.config Connection String" description="ContainerEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Model1.csdl|res://*/Model1.ssdl|res://*/Model1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=localhost;initial catalog=Container;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="E:\\Student\ Jobs\\DotNet\\Container\ Management\ System\\TP037785\\ContainerManagementSystem\\ContainerManagementSystem\\ContainerManagementSystem\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ContainerEntities']/@connectionString" />
+  </parameter>
+</parameters>

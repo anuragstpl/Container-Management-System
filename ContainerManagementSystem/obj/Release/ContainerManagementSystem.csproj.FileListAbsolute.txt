@@ -1,0 +1,48 @@
+E:\Student Jobs\DotNet\Azure Ticketing\2382016\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\bin\ContainerManagementSystem.dll
+E:\Student Jobs\DotNet\Azure Ticketing\2382016\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\bin\ContainerManagementSystem.pdb
+E:\Student Jobs\DotNet\Azure Ticketing\2382016\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\bin\AspNet.ScriptManager.jQuery.dll
+E:\Student Jobs\DotNet\Azure Ticketing\2382016\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+E:\Student Jobs\DotNet\Azure Ticketing\2382016\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\bin\DotNetOpenAuth.AspNet.dll
+E:\Student Jobs\DotNet\Azure Ticketing\2382016\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\bin\DotNetOpenAuth.Core.dll
+E:\Student Jobs\DotNet\Azure Ticketing\2382016\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\bin\DotNetOpenAuth.OAuth.Consumer.dll
+E:\Student Jobs\DotNet\Azure Ticketing\2382016\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\bin\DotNetOpenAuth.OAuth.dll
+E:\Student Jobs\DotNet\Azure Ticketing\2382016\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\bin\DotNetOpenAuth.OpenId.dll
+E:\Student Jobs\DotNet\Azure Ticketing\2382016\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+E:\Student Jobs\DotNet\Azure Ticketing\2382016\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\bin\EntityFramework.dll
+E:\Student Jobs\DotNet\Azure Ticketing\2382016\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+E:\Student Jobs\DotNet\Azure Ticketing\2382016\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\bin\Microsoft.Web.Infrastructure.dll
+E:\Student Jobs\DotNet\Azure Ticketing\2382016\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\bin\System.Web.Providers.dll
+E:\Student Jobs\DotNet\Azure Ticketing\2382016\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\bin\EntityFramework.xml
+E:\Student Jobs\DotNet\Azure Ticketing\2382016\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\bin\DotNetOpenAuth.Core.xml
+E:\Student Jobs\DotNet\Azure Ticketing\2382016\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\bin\DotNetOpenAuth.OAuth.xml
+E:\Student Jobs\DotNet\Azure Ticketing\2382016\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\bin\DotNetOpenAuth.OAuth.Consumer.xml
+E:\Student Jobs\DotNet\Azure Ticketing\2382016\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\bin\DotNetOpenAuth.OpenId.xml
+E:\Student Jobs\DotNet\Azure Ticketing\2382016\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+E:\Student Jobs\DotNet\Azure Ticketing\2382016\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\bin\DotNetOpenAuth.AspNet.xml
+E:\Student Jobs\DotNet\Azure Ticketing\2382016\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\obj\Release\ContainerManagementSystem.csprojResolveAssemblyReference.cache
+E:\Student Jobs\DotNet\Azure Ticketing\2382016\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\obj\Release\ContainerManagementSystem.dll
+E:\Student Jobs\DotNet\Azure Ticketing\2382016\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\obj\Release\ContainerManagementSystem.pdb
+E:\Student Jobs\DotNet\Container Management System\TP037785\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\bin\ContainerManagementSystem.dll
+E:\Student Jobs\DotNet\Container Management System\TP037785\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\bin\ContainerManagementSystem.pdb
+E:\Student Jobs\DotNet\Container Management System\TP037785\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\bin\AspNet.ScriptManager.jQuery.dll
+E:\Student Jobs\DotNet\Container Management System\TP037785\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+E:\Student Jobs\DotNet\Container Management System\TP037785\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\bin\DotNetOpenAuth.AspNet.dll
+E:\Student Jobs\DotNet\Container Management System\TP037785\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\bin\DotNetOpenAuth.Core.dll
+E:\Student Jobs\DotNet\Container Management System\TP037785\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\bin\DotNetOpenAuth.OAuth.Consumer.dll
+E:\Student Jobs\DotNet\Container Management System\TP037785\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\bin\DotNetOpenAuth.OAuth.dll
+E:\Student Jobs\DotNet\Container Management System\TP037785\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\bin\DotNetOpenAuth.OpenId.dll
+E:\Student Jobs\DotNet\Container Management System\TP037785\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+E:\Student Jobs\DotNet\Container Management System\TP037785\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\bin\EntityFramework.dll
+E:\Student Jobs\DotNet\Container Management System\TP037785\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+E:\Student Jobs\DotNet\Container Management System\TP037785\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\bin\Microsoft.Web.Infrastructure.dll
+E:\Student Jobs\DotNet\Container Management System\TP037785\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\bin\System.Web.Providers.dll
+E:\Student Jobs\DotNet\Container Management System\TP037785\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\bin\EntityFramework.xml
+E:\Student Jobs\DotNet\Container Management System\TP037785\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\bin\DotNetOpenAuth.Core.xml
+E:\Student Jobs\DotNet\Container Management System\TP037785\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\bin\DotNetOpenAuth.OAuth.xml
+E:\Student Jobs\DotNet\Container Management System\TP037785\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\bin\DotNetOpenAuth.OAuth.Consumer.xml
+E:\Student Jobs\DotNet\Container Management System\TP037785\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\bin\DotNetOpenAuth.OpenId.xml
+E:\Student Jobs\DotNet\Container Management System\TP037785\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+E:\Student Jobs\DotNet\Container Management System\TP037785\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\bin\DotNetOpenAuth.AspNet.xml
+E:\Student Jobs\DotNet\Container Management System\TP037785\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\obj\Release\ContainerManagementSystem.csprojResolveAssemblyReference.cache
+E:\Student Jobs\DotNet\Container Management System\TP037785\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\obj\Release\ContainerManagementSystem.dll
+E:\Student Jobs\DotNet\Container Management System\TP037785\ContainerManagementSystem\ContainerManagementSystem\ContainerManagementSystem\obj\Release\ContainerManagementSystem.pdb

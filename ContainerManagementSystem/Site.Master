@@ -1,0 +1,337 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="ContainerManagementSystem.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TP037785</title>
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+        ol li {
+            list-style-type:none;
+        }
+    </style>
+    <link rel="stylesheet" id="formidable-css" href="./Nova Group – Making Logistics Easier_files/formidablepro.css" type="text/css" media="all">
+    <link rel="stylesheet" id="accelerate_style-css" href="./Nova Group – Making Logistics Easier_files/style.css" type="text/css" media="all">
+    <link rel="stylesheet" id="accelerate_googlefonts-css" href="./Nova Group – Making Logistics Easier_files/css" type="text/css" media="all">
+    <link rel="stylesheet" id="accelerate-fontawesome-css" href="./Nova Group – Making Logistics Easier_files/font-awesome.css" type="text/css" media="all">
+    <script type="text/javascript" src="./Nova Group – Making Logistics Easier_files/jquery.js.download"></script>
+    <script type="text/javascript" src="./Nova Group – Making Logistics Easier_files/jquery-migrate.min.js.download"></script>
+    <script type="text/javascript" src="./Nova Group – Making Logistics Easier_files/accelerate-custom.js.download"></script>
+    <link rel="https://api.w.org/" href="http://www.novalogistics.com.my/?rest_route=/">
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.novalogistics.com.my/xmlrpc.php?rsd">
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.novalogistics.com.my/wp-includes/wlwmanifest.xml">
+    <meta name="generator" content="WordPress 4.4.14">
+    <style type="text/css">
+        .accelerate-button, blockquote, button, input[type=button], input[type=reset], input[type=submit] {
+            background-color: #25017b;
+        }
+
+        a {
+            color: #25017b;
+        }
+
+        #page {
+            border-top: 3px solid #25017b;
+        }
+
+        #site-title a:hover {
+            color: #25017b;
+        }
+
+        #search-form span, .main-navigation a:hover, .main-navigation ul li ul li a:hover, .main-navigation ul li ul li:hover > a, .main-navigation ul li.current-menu-ancestor a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-item ul li a:hover, .main-navigation ul li.current_page_ancestor a, .main-navigation ul li.current_page_item a, .main-navigation ul li:hover > a {
+            background-color: #25017b;
+        }
+
+        .site-header .menu-toggle:before {
+            color: #25017b;
+        }
+
+        .main-small-navigation li:hover {
+            background-color: #25017b;
+        }
+
+        .main-small-navigation ul > .current-menu-item, .main-small-navigation ul > .current_page_item {
+            background: #25017b;
+        }
+
+        .footer-menu a:hover, .footer-menu ul li.current-menu-ancestor a, .footer-menu ul li.current-menu-item a, .footer-menu ul li.current_page_ancestor a, .footer-menu ul li.current_page_item a, .footer-menu ul li:hover > a {
+            color: #25017b;
+        }
+
+        #featured-slider .slider-read-more-button, .slider-title-head .entry-title a {
+            background-color: #25017b;
+        }
+
+        a.slide-prev, a.slide-next, .slider-title-head .entry-title a {
+            background-color: #25017b;
+        }
+
+        #controllers a.active, #controllers a:hover {
+            background-color: #25017b;
+            color: #25017b;
+        }
+
+        .format-link .entry-content a {
+            background-color: #25017b;
+        }
+
+        #secondary .widget_featured_single_post h3.widget-title a:hover, .widget_image_service_block .entry-title a:hover {
+            color: #25017b;
+        }
+
+        .pagination span {
+            background-color: #25017b;
+        }
+
+        .pagination a span:hover {
+            color: #25017b;
+            border-color: #25017b;
+        }
+
+        #content .comments-area a.comment-edit-link:hover, #content .comments-area a.comment-permalink:hover, #content .comments-area article header cite a:hover, .comments-area .comment-author-link a:hover {
+            color: #25017b;
+        }
+
+        .comments-area .comment-author-link span {
+            background-color: #25017b;
+        }
+
+        #wp-calendar #today, .comment .comment-reply-link:hover, .nav-next a, .nav-previous a {
+            color: #25017b;
+        }
+
+        .widget-title span {
+            border-bottom: 2px solid #25017b;
+        }
+
+        #secondary h3 span:before, .footer-widgets-area h3 span:before {
+            color: #25017b;
+        }
+
+        #secondary .accelerate_tagcloud_widget a:hover, .footer-widgets-area .accelerate_tagcloud_widget a:hover {
+            background-color: #25017b;
+        }
+
+        .footer-widgets-area a:hover {
+            color: #25017b;
+        }
+
+        .footer-socket-wrapper {
+            border-top: 3px solid #25017b;
+        }
+
+            .footer-socket-wrapper .copyright a:hover {
+                color: #25017b;
+            }
+
+        a#scroll-up {
+            background-color: #25017b;
+        }
+
+        .entry-meta .byline i, .entry-meta .cat-links i, .entry-meta a, .post .entry-title a:hover {
+            color: #25017b;
+        }
+
+        .entry-meta .post-format i {
+            background-color: #25017b;
+        }
+
+        .entry-meta .comments-link a:hover, .entry-meta .edit-link a:hover, .entry-meta .posted-on a:hover, .entry-meta .tag-links a:hover {
+            color: #25017b;
+        }
+
+        .more-link span, .read-more {
+            background-color: #25017b;
+        }
+    </style>
+    <style type="text/css" id="custom-background-css">
+        body.custom-background {
+            background-color: #ffffff;
+            background-image: url('./Nova Group – Making Logistics Easier_files/1422750.jpg');
+            background-repeat: repeat-y;
+            background-position: top left;
+            background-attachment: scroll;
+        }
+    </style>
+</head>
+<body class="home page page-id-58 page-template-default custom-background no-sidebar-full-width ">
+    <form runat="server">
+
+        <div id="page" class="hfeed site">
+            <header id="masthead" class="site-header clearfix">
+
+                <div id="header-text-nav-container" class="clearfix">
+
+
+                    <div class="inner-wrap">
+
+                        <div id="header-text-nav-wrap" class="clearfix">
+                            <div id="header-left-section">
+                                <div id="header-logo-image">
+                                    <a href="#" title="Container Management System" rel="home">
+                                        <img src="./Nova Group – Making Logistics Easier_files/143002494653184.gif" alt="Nova Group"></a>
+                                </div>
+                                <!-- #header-logo-image -->
+                            </div>
+                            <!-- #header-left-section -->
+                            <div id="header-right-section">
+                                <div id="header-right-sidebar" class="clearfix">
+                                    <aside id="shortcodes-ultimate-3" class="widget shortcodes-ultimate">
+                                        <div class="textwidget"></div>
+                                    </aside>
+                                    <aside id="search-2" class="widget widget_search">
+                                       
+                                        <!-- .searchform -->
+                                    </aside>
+                                </div>
+                            </div>
+                            <!-- #header-right-section -->
+
+                        </div>
+                        <!-- #header-text-nav-wrap -->
+
+                    </div>
+                    <!-- .inner-wrap -->
+
+
+                    <nav id="site-navigation" class="main-navigation inner-wrap clearfix" role="navigation">
+                        <h3 class="menu-toggle">Menu</h3>
+                        <div class="menu-main-container">
+                           
+
+                            <ul id="menu-main" class="menunav-menu">
+                                <li id="menu-item-10" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-10"><a href="Default.aspx">Home</a></li>
+                                <li id="menu-item-76" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-76"><a href="AboutUs.aspx">About Us</a>
+                                    
+                                </li>
+                                <li id="menu-item-53" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53"><a href="cruises.aspx">Cruises</a></li>
+                                <li id="menu-item-52" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52"><a href="ShippingOffers.aspx">Offers</a></li>
+                                <li id="menu-item-54" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54"><a href="Destinations.aspx">Destinations</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <!-- #header-text-nav-container -->
+
+                <div class="header-image-wrap">
+                    <div class="inner-wrap">
+                        <img src="./Nova Group – Making Logistics Easier_files/cropped-header_image-logistics.png" class="header-image" width="940" height="185" alt="Nova Group"></div>
+                </div>
+
+                <section id="featured-slider">
+                    <div class="slider-cycle inner-wrap">
+                        <div class="slider-rotate" style="position: relative; width: 100%; height: 198px;">
+                            <div class="slides displayblock" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 3; opacity: 0; width: 100%;">
+                                <figure>
+                                    <img alt="Transportation Services" src="./Nova Group – Making Logistics Easier_files/slider1.jpg">
+                                </figure>
+                                <div class="entry-container">
+                                    <div class="slider-title-head">
+                                        <h3 class="entry-title"><a href="#" title="Transportation Services">Transportation Services</a></h3>
+                                    </div>
+                                    <div class="entry-content">
+                                        <p>280 Trucks for transportation.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slides displaynone" style="position: absolute; top: 0px; left: 0px; display: block; z-index: 4; width: 100%; opacity: 1;">
+                                <figure>
+                                    <img alt="Public Warehouse Services" src="./Nova Group – Making Logistics Easier_files/slider2.jpg">
+                                </figure>
+                                <div class="entry-container">
+                                    <div class="slider-title-head">
+                                        <h3 class="entry-title"><a href="#" title="Public Warehouse Services">Public Warehouse Services</a></h3>
+                                    </div>
+                                    <div class="entry-content">
+                                        <p>55,000 sq feet with Covered warehouse 40,000 Sq feet</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slides displaynone" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 3; width: 100%; opacity: 0;">
+                                <figure>
+                                    <img alt="Haulage Services" src="./Nova Group – Making Logistics Easier_files/slider3.jpg">
+                                </figure>
+                                <div class="entry-container">
+                                    <div class="slider-title-head">
+                                        <h3 class="entry-title"><a href="#" title="Haulage Services">Haulage Services</a></h3>
+                                    </div>
+                                    <div class="entry-content">
+                                        <p>44 prime movers and 210 trailers to serve the most demanding needs</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="slide-next" href="#"><i class="fa fa-angle-right"></i></a>
+                        <a class="slide-prev" href="#"><i class="fa fa-angle-left"></i></a>
+                    </div>
+
+                    <nav id="controllers" class="clearfix"><a href="#" class="">1</a><a href="#" class="active">2</a><a href="#" class="">3</a></nav>
+                </section>
+
+
+            </header>
+            <div id="main" class="clearfix">
+                <div class="inner-wrap clearfix">
+
+                    <div id="primary">
+                        <div id="Div1" class="clearfix">
+                            <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+                        </div>
+                        <!-- #content -->
+                    </div>
+                    <!-- #primary -->
+
+
+
+
+                </div>
+                <!-- .inner-wrap -->
+            </div>
+            <!-- #main -->
+            <footer id="colophon" class="clearfix">
+
+
+                <div class="footer-socket-wrapper clearfix">
+                    <div class="inner-wrap">
+                        <div class="footer-socket-area">
+                            <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+                            TP037785			
+                            <nav class="footer-menu">
+                                <div class="menu-footer-container">
+                                    
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <a href="#" id="scroll-up" style="display: none;"><i class="fa fa-long-arrow-up"></i></a>
+        </div>
+
+
+
+        
+        <div class="tidePoweredBy" id="lf_poweredby"></div>
+        <link rel="stylesheet" id="su-box-shortcodes-css" href="./Nova Group – Making Logistics Easier_files/box-shortcodes.css" type="text/css" media="all">
+        <link rel="stylesheet" id="su-media-shortcodes-css" href="./Nova Group – Making Logistics Easier_files/media-shortcodes.css" type="text/css" media="all">
+        <script type="text/javascript" src="./Nova Group – Making Logistics Easier_files/jquery.cycle.all.min.js.download"></script>
+        <script type="text/javascript" src="./Nova Group – Making Logistics Easier_files/accelerate-slider-setting.js.download"></script>
+        <script type="text/javascript" src="./Nova Group – Making Logistics Easier_files/navigation.js.download"></script>
+        <script type="text/javascript" src="./Nova Group – Making Logistics Easier_files/wp-embed.min.js.download"></script>
+    </form>
+</body>
+</html>

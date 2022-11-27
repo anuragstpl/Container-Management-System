@@ -1,0 +1,901 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0CE29A77-A3D2-40BE-992A-19953C22E2EE}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ContainerManagementSystem</RootNamespace>
+    <AssemblyName>ContainerManagementSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.7.1\lib\net40\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery.UI.Combined">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.UI.Combined.1.8.20\lib\net40\AspNet.ScriptManager.jQuery.UI.Combined.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.1\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.0.3.12153\lib\net40-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Membership.OpenAuth, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Membership.OpenAuth.1.0.0\lib\net40\Microsoft.AspNet.Membership.OpenAuth.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="AboutUs.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Login1.aspx" />
+    <Content Include="Account\Manage.aspx" />
+    <Content Include="Account\OpenAuthProviders.ascx" />
+    <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="Admin\CreateSchedule.aspx" />
+    <Content Include="Admin\CreateVessles.aspx" />
+    <Content Include="Admin\Default.aspx" />
+    <Content Include="Admin\ManageFleet.aspx" />
+    <Content Include="Admin\ManageShipment.aspx" />
+    <Content Include="Admin\Nova Group – Making Logistics Easier_files\143002494653184.gif" />
+    <Content Include="Admin\Nova Group – Making Logistics Easier_files\box-shortcodes.css" />
+    <Content Include="Admin\Nova Group – Making Logistics Easier_files\cropped-header_image-logistics.png" />
+    <Content Include="Admin\Nova Group – Making Logistics Easier_files\defaultphoto.png" />
+    <Content Include="Admin\Nova Group – Making Logistics Easier_files\font-awesome.css" />
+    <Content Include="Admin\Nova Group – Making Logistics Easier_files\formidablepro.css" />
+    <Content Include="Admin\Nova Group – Making Logistics Easier_files\google4.png" />
+    <Content Include="Admin\Nova Group – Making Logistics Easier_files\mapcnt6.png" />
+    <Content Include="Admin\Nova Group – Making Logistics Easier_files\maps.html" />
+    <Content Include="Admin\Nova Group – Making Logistics Easier_files\media-shortcodes.css" />
+    <Content Include="Admin\Nova Group – Making Logistics Easier_files\saved_resource%281%29.html" />
+    <Content Include="Admin\Nova Group – Making Logistics Easier_files\saved_resource.html" />
+    <Content Include="Admin\Nova Group – Making Logistics Easier_files\slider1.jpg" />
+    <Content Include="Admin\Nova Group – Making Logistics Easier_files\slider2.jpg" />
+    <Content Include="Admin\Nova Group – Making Logistics Easier_files\slider3.jpg" />
+    <Content Include="Admin\Nova Group – Making Logistics Easier_files\style.css" />
+    <Content Include="Admin\Nova Group – Making Logistics Easier_files\tmapctrl.png" />
+    <Content Include="Admin\Register.aspx" />
+    <Content Include="Admin\Shipment.aspx" />
+    <Content Include="Admin\ShippingCost.aspx" />
+    <Content Include="Admin\site-files\css\css.css" />
+    <Content Include="Admin\site-files\css\css_002.css" />
+    <Content Include="Admin\site-files\css\hf_styles.css" />
+    <Content Include="Admin\site-files\css\lf_styles.css" />
+    <Content Include="Admin\site-files\css\pureslider.css" />
+    <Content Include="Admin\site-files\images\backtotop.png" />
+    <Content Include="Admin\site-files\images\b_all.gif" />
+    <Content Include="Admin\site-files\images\b_search.gif" />
+    <Content Include="Admin\site-files\images\email-1.png" />
+    <Content Include="Admin\site-files\images\facebook-1.png" />
+    <Content Include="Admin\site-files\images\home-1.png" />
+    <Content Include="Admin\site-files\images\hot-bg.png" />
+    <Content Include="Admin\site-files\images\lbcomcrwtus3.jpg" />
+    <Content Include="Admin\site-files\images\logger.gif" />
+    <Content Include="Admin\site-files\images\navigation_menu.png" />
+    <Content Include="Admin\site-files\images\slide_1.jpg" />
+    <Content Include="Admin\site-files\images\slide_2.jpg" />
+    <Content Include="Admin\site-files\images\slide_3.jpg" />
+    <Content Include="Admin\site-files\images\slide_4.jpg" />
+    <Content Include="Admin\site-files\images\slide_5.jpg" />
+    <Content Include="Admin\site-files\images\slide_6.jpg" />
+    <Content Include="Admin\site-files\images\slide_7.jpg" />
+    <Content Include="Admin\site-files\images\slide_8.jpg" />
+    <Content Include="Admin\site-files\images\v_1.png" />
+    <Content Include="Admin\site-files\images\v_2.png" />
+    <Content Include="Admin\site-files\images\v_3.png" />
+    <Content Include="Admin\site-files\images\v_4.png" />
+    <Content Include="Admin\site-files\images\v_5.png" />
+    <Content Include="Admin\site-files\images\v_6.png" />
+    <Content Include="Admin\site-files\js\bootstrap-scrollspy.js" />
+    <Content Include="Admin\site-files\js\jquery-1.11.3.min.js" />
+    <Content Include="Admin\site-files\js\jquery-1.7.2.min.js" />
+    <Content Include="Admin\site-files\js\jquery-1.js" />
+    <Content Include="Admin\site-files\js\jquery-1_002.js" />
+    <Content Include="Admin\site-files\js\jquery-packed.js" />
+    <Content Include="Admin\site-files\js\jquery.idtabs.pack.js" />
+    <Content Include="Admin\site-files\js\jquery.index.js" />
+    <Content Include="Admin\site-files\js\jquery.js" />
+    <Content Include="Admin\site-files\js\jquery_002.js" />
+    <Content Include="Admin\site-files\js\lf_site_script.js" />
+    <Content Include="Admin\site-files\js\main.js" />
+    <Content Include="Admin\site-files\js\move-top.js" />
+    <Content Include="Admin\site-files\js\pureslider.js" />
+    <Content Include="Admin\site-files\js\query-packed.js" />
+    <Content Include="Admin\TrackShipMent.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="cruises.aspx" />
+    <Content Include="Customer\Default.aspx" />
+    <Content Include="Customer\MakePayment.aspx" />
+    <Content Include="Customer\Nova Group – Making Logistics Easier.html" />
+    <Content Include="Customer\Nova Group – Making Logistics Easier_files\1422750.jpg" />
+    <Content Include="Customer\Nova Group – Making Logistics Easier_files\143002494653184.gif" />
+    <Content Include="Customer\Nova Group – Making Logistics Easier_files\box-shortcodes.css" />
+    <Content Include="Customer\Nova Group – Making Logistics Easier_files\cropped-header_image-logistics.png" />
+    <Content Include="Customer\Nova Group – Making Logistics Easier_files\defaultphoto.png" />
+    <Content Include="Customer\Nova Group – Making Logistics Easier_files\font-awesome.css" />
+    <Content Include="Customer\Nova Group – Making Logistics Easier_files\formidablepro.css" />
+    <Content Include="Customer\Nova Group – Making Logistics Easier_files\google4.png" />
+    <Content Include="Customer\Nova Group – Making Logistics Easier_files\mapcnt6.png" />
+    <Content Include="Customer\Nova Group – Making Logistics Easier_files\maps.html" />
+    <Content Include="Customer\Nova Group – Making Logistics Easier_files\media-shortcodes.css" />
+    <Content Include="Customer\Nova Group – Making Logistics Easier_files\saved_resource%281%29.html" />
+    <Content Include="Customer\Nova Group – Making Logistics Easier_files\saved_resource.html" />
+    <Content Include="Customer\Nova Group – Making Logistics Easier_files\slider1.jpg" />
+    <Content Include="Customer\Nova Group – Making Logistics Easier_files\slider2.jpg" />
+    <Content Include="Customer\Nova Group – Making Logistics Easier_files\slider3.jpg" />
+    <Content Include="Customer\Nova Group – Making Logistics Easier_files\style.css" />
+    <Content Include="Customer\Nova Group – Making Logistics Easier_files\tmapctrl.png" />
+    <Content Include="Customer\site-files\css\css.css" />
+    <Content Include="Customer\site-files\css\css_002.css" />
+    <Content Include="Customer\site-files\css\hf_styles.css" />
+    <Content Include="Customer\site-files\css\lf_styles.css" />
+    <Content Include="Customer\site-files\css\pureslider.css" />
+    <Content Include="Customer\site-files\images\backtotop.png" />
+    <Content Include="Customer\site-files\images\b_all.gif" />
+    <Content Include="Customer\site-files\images\b_search.gif" />
+    <Content Include="Customer\site-files\images\email-1.png" />
+    <Content Include="Customer\site-files\images\facebook-1.png" />
+    <Content Include="Customer\site-files\images\home-1.png" />
+    <Content Include="Customer\site-files\images\hot-bg.png" />
+    <Content Include="Customer\site-files\images\lbcomcrwtus3.jpg" />
+    <Content Include="Customer\site-files\images\logger.gif" />
+    <Content Include="Customer\site-files\images\navigation_menu.png" />
+    <Content Include="Customer\site-files\images\slide_1.jpg" />
+    <Content Include="Customer\site-files\images\slide_2.jpg" />
+    <Content Include="Customer\site-files\images\slide_3.jpg" />
+    <Content Include="Customer\site-files\images\slide_4.jpg" />
+    <Content Include="Customer\site-files\images\slide_5.jpg" />
+    <Content Include="Customer\site-files\images\slide_6.jpg" />
+    <Content Include="Customer\site-files\images\slide_7.jpg" />
+    <Content Include="Customer\site-files\images\slide_8.jpg" />
+    <Content Include="Customer\site-files\images\v_1.png" />
+    <Content Include="Customer\site-files\images\v_2.png" />
+    <Content Include="Customer\site-files\images\v_3.png" />
+    <Content Include="Customer\site-files\images\v_4.png" />
+    <Content Include="Customer\site-files\images\v_5.png" />
+    <Content Include="Customer\site-files\images\v_6.png" />
+    <Content Include="Customer\site-files\js\bootstrap-scrollspy.js" />
+    <Content Include="Customer\site-files\js\jquery-1.11.3.min.js" />
+    <Content Include="Customer\site-files\js\jquery-1.7.2.min.js" />
+    <Content Include="Customer\site-files\js\jquery-1.js" />
+    <Content Include="Customer\site-files\js\jquery-1_002.js" />
+    <Content Include="Customer\site-files\js\jquery-packed.js" />
+    <Content Include="Customer\site-files\js\jquery.idtabs.pack.js" />
+    <Content Include="Customer\site-files\js\jquery.index.js" />
+    <Content Include="Customer\site-files\js\jquery.js" />
+    <Content Include="Customer\site-files\js\jquery_002.js" />
+    <Content Include="Customer\site-files\js\lf_site_script.js" />
+    <Content Include="Customer\site-files\js\main.js" />
+    <Content Include="Customer\site-files\js\move-top.js" />
+    <Content Include="Customer\site-files\js\pureslider.js" />
+    <Content Include="Customer\site-files\js\query-packed.js" />
+    <Content Include="Customer\TrackShipMent.aspx" />
+    <Content Include="Destinations.aspx" />
+    <Content Include="Images\accent.png" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\orderedList0.png" />
+    <Content Include="Images\orderedList1.png" />
+    <Content Include="Images\orderedList2.png" />
+    <Content Include="Images\orderedList3.png" />
+    <Content Include="Images\orderedList4.png" />
+    <Content Include="Images\orderedList5.png" />
+    <Content Include="Images\orderedList6.png" />
+    <Content Include="Images\orderedList7.png" />
+    <Content Include="Images\orderedList8.png" />
+    <Content Include="Images\orderedList9.png" />
+    <Content Include="Login.aspx" />
+    <Content Include="LoginN.aspx" />
+    <Content Include="Nova Group – Making Logistics Easier.html" />
+    <Content Include="Nova Group – Making Logistics Easier_files\143002494653184.gif" />
+    <Content Include="Nova Group – Making Logistics Easier_files\box-shortcodes.css" />
+    <Content Include="Nova Group – Making Logistics Easier_files\cropped-header_image-logistics.png" />
+    <Content Include="Nova Group – Making Logistics Easier_files\defaultphoto.png" />
+    <Content Include="Nova Group – Making Logistics Easier_files\font-awesome.css" />
+    <Content Include="Nova Group – Making Logistics Easier_files\formidablepro.css" />
+    <Content Include="Nova Group – Making Logistics Easier_files\google4.png" />
+    <Content Include="Nova Group – Making Logistics Easier_files\mapcnt6.png" />
+    <Content Include="Nova Group – Making Logistics Easier_files\maps.html" />
+    <Content Include="Nova Group – Making Logistics Easier_files\media-shortcodes.css" />
+    <Content Include="Nova Group – Making Logistics Easier_files\saved_resource%281%29.html" />
+    <Content Include="Nova Group – Making Logistics Easier_files\saved_resource.html" />
+    <Content Include="Nova Group – Making Logistics Easier_files\slider1.jpg" />
+    <Content Include="Nova Group – Making Logistics Easier_files\slider2.jpg" />
+    <Content Include="Nova Group – Making Logistics Easier_files\slider3.jpg" />
+    <Content Include="Nova Group – Making Logistics Easier_files\style.css" />
+    <Content Include="Nova Group – Making Logistics Easier_files\tmapctrl.png" />
+    <Content Include="packages.config" />
+    <Content Include="Partner\AddPrepaidCustomer.aspx" />
+    <Content Include="Partner\Default.aspx" />
+    <Content Include="Partner\Nova Group – Making Logistics Easier_files\1422750.jpg" />
+    <Content Include="Partner\Nova Group – Making Logistics Easier_files\143002494653184.gif" />
+    <Content Include="Partner\Nova Group – Making Logistics Easier_files\box-shortcodes.css" />
+    <Content Include="Partner\Nova Group – Making Logistics Easier_files\cropped-header_image-logistics.png" />
+    <Content Include="Partner\Nova Group – Making Logistics Easier_files\defaultphoto.png" />
+    <Content Include="Partner\Nova Group – Making Logistics Easier_files\font-awesome.css" />
+    <Content Include="Partner\Nova Group – Making Logistics Easier_files\formidablepro.css" />
+    <Content Include="Partner\Nova Group – Making Logistics Easier_files\google4.png" />
+    <Content Include="Partner\Nova Group – Making Logistics Easier_files\mapcnt6.png" />
+    <Content Include="Partner\Nova Group – Making Logistics Easier_files\maps.html" />
+    <Content Include="Partner\Nova Group – Making Logistics Easier_files\media-shortcodes.css" />
+    <Content Include="Partner\Nova Group – Making Logistics Easier_files\saved_resource%281%29.html" />
+    <Content Include="Partner\Nova Group – Making Logistics Easier_files\saved_resource.html" />
+    <Content Include="Partner\Nova Group – Making Logistics Easier_files\slider1.jpg" />
+    <Content Include="Partner\Nova Group – Making Logistics Easier_files\slider2.jpg" />
+    <Content Include="Partner\Nova Group – Making Logistics Easier_files\slider3.jpg" />
+    <Content Include="Partner\Nova Group – Making Logistics Easier_files\style.css" />
+    <Content Include="Partner\Nova Group – Making Logistics Easier_files\tmapctrl.png" />
+    <Content Include="Partner\PartnerM.Master" />
+    <Content Include="Customer\CustomerM.Master" />
+    <Content Include="Admin\Site3.Master" />
+    <Content Include="Admin\AdminM.Master" />
+    <Content Include="Admin\site-files\images\Thumbs.db" />
+    <Content Include="Admin\site-files\Thumbs.db" />
+    <Content Include="Partner\PartnerM1.Master" />
+    <Content Include="Partner\site-files\images\Thumbs.db" />
+    <Content Include="Partner\site-files\Thumbs.db" />
+    <Content Include="Customer\CustomerM1.Master" />
+    <Content Include="Customer\site-files\images\Thumbs.db" />
+    <Content Include="Customer\site-files\Thumbs.db" />
+    <Content Include="Nova Group – Making Logistics Easier_files\common.js.download" />
+    <Content Include="Nova Group – Making Logistics Easier_files\controls.js.download" />
+    <Content Include="Nova Group – Making Logistics Easier_files\css" />
+    <Content Include="Nova Group – Making Logistics Easier_files\css%281%29" />
+    <Content Include="Nova Group – Making Logistics Easier_files\init_embed.js.download" />
+    <Content Include="Nova Group – Making Logistics Easier_files\jquery-migrate.min.js.download" />
+    <Content Include="Nova Group – Making Logistics Easier_files\jquery.cycle.all.min.js.download" />
+    <Content Include="Nova Group – Making Logistics Easier_files\jquery.js.download" />
+    <Content Include="Nova Group – Making Logistics Easier_files\js" />
+    <Content Include="Nova Group – Making Logistics Easier_files\kh" />
+    <Content Include="Nova Group – Making Logistics Easier_files\map.js.download" />
+    <Content Include="Nova Group – Making Logistics Easier_files\onion.js.download" />
+    <Content Include="Nova Group – Making Logistics Easier_files\overlay.js.download" />
+    <Content Include="Nova Group – Making Logistics Easier_files\QuotaService.RecordEvent" />
+    <Content Include="Nova Group – Making Logistics Easier_files\search_impl.js.download" />
+    <Content Include="Nova Group – Making Logistics Easier_files\stats.js.download" />
+    <Content Include="Partner\Nova Group – Making Logistics Easier_files\common.js.download" />
+    <Content Include="Partner\Nova Group – Making Logistics Easier_files\controls.js.download" />
+    <Content Include="Partner\Nova Group – Making Logistics Easier_files\css" />
+    <Content Include="Partner\Nova Group – Making Logistics Easier_files\css%281%29" />
+    <Content Include="Partner\Nova Group – Making Logistics Easier_files\init_embed.js.download" />
+    <Content Include="Partner\Nova Group – Making Logistics Easier_files\jquery-migrate.min.js.download" />
+    <Content Include="Partner\Nova Group – Making Logistics Easier_files\jquery.cycle.all.min.js.download" />
+    <Content Include="Partner\Nova Group – Making Logistics Easier_files\jquery.js.download" />
+    <Content Include="Partner\Nova Group – Making Logistics Easier_files\js" />
+    <Content Include="Partner\Nova Group – Making Logistics Easier_files\kh" />
+    <Content Include="Partner\Nova Group – Making Logistics Easier_files\map.js.download" />
+    <Content Include="Partner\Nova Group – Making Logistics Easier_files\onion.js.download" />
+    <Content Include="Partner\Nova Group – Making Logistics Easier_files\overlay.js.download" />
+    <Content Include="Partner\Nova Group – Making Logistics Easier_files\QuotaService.RecordEvent" />
+    <Content Include="Partner\Nova Group – Making Logistics Easier_files\search_impl.js.download" />
+    <Content Include="Partner\Nova Group – Making Logistics Easier_files\stats.js.download" />
+    <Content Include="Customer\Nova Group – Making Logistics Easier_files\common.js.download" />
+    <Content Include="Customer\Nova Group – Making Logistics Easier_files\controls.js.download" />
+    <Content Include="Customer\Nova Group – Making Logistics Easier_files\css" />
+    <Content Include="Customer\Nova Group – Making Logistics Easier_files\css%281%29" />
+    <Content Include="Customer\Nova Group – Making Logistics Easier_files\init_embed.js.download" />
+    <Content Include="Customer\Nova Group – Making Logistics Easier_files\jquery-migrate.min.js.download" />
+    <Content Include="Customer\Nova Group – Making Logistics Easier_files\jquery.cycle.all.min.js.download" />
+    <Content Include="Customer\Nova Group – Making Logistics Easier_files\jquery.js.download" />
+    <Content Include="Customer\Nova Group – Making Logistics Easier_files\js" />
+    <Content Include="Customer\Nova Group – Making Logistics Easier_files\kh" />
+    <Content Include="Customer\Nova Group – Making Logistics Easier_files\map.js.download" />
+    <Content Include="Customer\Nova Group – Making Logistics Easier_files\onion.js.download" />
+    <Content Include="Customer\Nova Group – Making Logistics Easier_files\overlay.js.download" />
+    <Content Include="Customer\Nova Group – Making Logistics Easier_files\QuotaService.RecordEvent" />
+    <Content Include="Customer\Nova Group – Making Logistics Easier_files\search_impl.js.download" />
+    <Content Include="Customer\Nova Group – Making Logistics Easier_files\stats.js.download" />
+    <Content Include="Admin\Nova Group – Making Logistics Easier_files\common.js.download" />
+    <Content Include="Admin\Nova Group – Making Logistics Easier_files\controls.js.download" />
+    <Content Include="Admin\Nova Group – Making Logistics Easier_files\css" />
+    <Content Include="Admin\Nova Group – Making Logistics Easier_files\css%281%29" />
+    <Content Include="Admin\Nova Group – Making Logistics Easier_files\init_embed.js.download" />
+    <Content Include="Admin\Nova Group – Making Logistics Easier_files\jquery-migrate.min.js.download" />
+    <Content Include="Admin\Nova Group – Making Logistics Easier_files\jquery.cycle.all.min.js.download" />
+    <Content Include="Admin\Nova Group – Making Logistics Easier_files\jquery.js.download" />
+    <Content Include="Admin\Nova Group – Making Logistics Easier_files\js" />
+    <Content Include="Admin\Nova Group – Making Logistics Easier_files\kh" />
+    <Content Include="Admin\Nova Group – Making Logistics Easier_files\map.js.download" />
+    <Content Include="Admin\Nova Group – Making Logistics Easier_files\onion.js.download" />
+    <Content Include="Admin\Nova Group – Making Logistics Easier_files\overlay.js.download" />
+    <Content Include="Admin\Nova Group – Making Logistics Easier_files\QuotaService.RecordEvent" />
+    <Content Include="Admin\Nova Group – Making Logistics Easier_files\search_impl.js.download" />
+    <Content Include="Admin\Nova Group – Making Logistics Easier_files\stats.js.download" />
+    <None Include="Properties\PublishProfiles\cmsticketing - FTP %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\cmsticketing - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\cmsticketing - Web Deploy %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\cmsticketing - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\containermgmt - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\containermgmt - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\TP037785container - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\TP037785container - Web Deploy.pubxml" />
+    <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Partner\AddCustomer.aspx" />
+    <Content Include="Partner\CreateShipment.aspx" />
+    <Content Include="Partner\Shipment.aspx" />
+    <Content Include="Partner\Customers.aspx" />
+    <Content Include="Partner\site-files\css\css.css" />
+    <Content Include="Partner\site-files\css\css_002.css" />
+    <Content Include="Partner\site-files\css\hf_styles.css" />
+    <Content Include="Partner\site-files\css\lf_styles.css" />
+    <Content Include="Partner\site-files\css\pureslider.css" />
+    <Content Include="Partner\site-files\images\backtotop.png" />
+    <Content Include="Partner\site-files\images\b_all.gif" />
+    <Content Include="Partner\site-files\images\b_search.gif" />
+    <Content Include="Partner\site-files\images\email-1.png" />
+    <Content Include="Partner\site-files\images\facebook-1.png" />
+    <Content Include="Partner\site-files\images\home-1.png" />
+    <Content Include="Partner\site-files\images\hot-bg.png" />
+    <Content Include="Partner\site-files\images\lbcomcrwtus3.jpg" />
+    <Content Include="Partner\site-files\images\logger.gif" />
+    <Content Include="Partner\site-files\images\navigation_menu.png" />
+    <Content Include="Partner\site-files\images\slide_1.jpg" />
+    <Content Include="Partner\site-files\images\slide_2.jpg" />
+    <Content Include="Partner\site-files\images\slide_3.jpg" />
+    <Content Include="Partner\site-files\images\slide_4.jpg" />
+    <Content Include="Partner\site-files\images\slide_5.jpg" />
+    <Content Include="Partner\site-files\images\slide_6.jpg" />
+    <Content Include="Partner\site-files\images\slide_7.jpg" />
+    <Content Include="Partner\site-files\images\slide_8.jpg" />
+    <Content Include="Partner\site-files\images\v_1.png" />
+    <Content Include="Partner\site-files\images\v_2.png" />
+    <Content Include="Partner\site-files\images\v_3.png" />
+    <Content Include="Partner\site-files\images\v_4.png" />
+    <Content Include="Partner\site-files\images\v_5.png" />
+    <Content Include="Partner\site-files\images\v_6.png" />
+    <Content Include="Partner\site-files\js\bootstrap-scrollspy.js" />
+    <Content Include="Partner\site-files\js\jquery-1.11.3.min.js" />
+    <Content Include="Partner\site-files\js\jquery-1.7.2.min.js" />
+    <Content Include="Partner\site-files\js\jquery-1.js" />
+    <Content Include="Partner\site-files\js\jquery-1_002.js" />
+    <Content Include="Partner\site-files\js\jquery-packed.js" />
+    <Content Include="Partner\site-files\js\jquery.idtabs.pack.js" />
+    <Content Include="Partner\site-files\js\jquery.index.js" />
+    <Content Include="Partner\site-files\js\jquery.js" />
+    <Content Include="Partner\site-files\js\jquery_002.js" />
+    <Content Include="Partner\site-files\js\lf_site_script.js" />
+    <Content Include="Partner\site-files\js\main.js" />
+    <Content Include="Partner\site-files\js\move-top.js" />
+    <Content Include="Partner\site-files\js\pureslider.js" />
+    <Content Include="Partner\site-files\js\query-packed.js" />
+    <Content Include="Partner\TrackShipMent.aspx" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="ShippingOffers.aspx" />
+    <Content Include="site-files\css\css.css" />
+    <Content Include="site-files\css\css_002.css" />
+    <Content Include="site-files\css\hf_styles.css" />
+    <Content Include="site-files\css\lf_styles.css" />
+    <Content Include="site-files\css\pureslider.css" />
+    <Content Include="site-files\images\backtotop.png" />
+    <Content Include="site-files\images\b_all.gif" />
+    <Content Include="site-files\images\b_search.gif" />
+    <Content Include="site-files\images\email-1.png" />
+    <Content Include="site-files\images\facebook-1.png" />
+    <Content Include="site-files\images\home-1.png" />
+    <Content Include="site-files\images\hot-bg.png" />
+    <Content Include="site-files\images\lbcomcrwtus3.jpg" />
+    <Content Include="site-files\images\logger.gif" />
+    <Content Include="site-files\images\navigation_menu.png" />
+    <Content Include="site-files\images\slide_1.jpg" />
+    <Content Include="site-files\images\slide_2.jpg" />
+    <Content Include="site-files\images\slide_3.jpg" />
+    <Content Include="site-files\images\slide_4.jpg" />
+    <Content Include="site-files\images\slide_5.jpg" />
+    <Content Include="site-files\images\slide_6.jpg" />
+    <Content Include="site-files\images\slide_7.jpg" />
+    <Content Include="site-files\images\slide_8.jpg" />
+    <Content Include="site-files\images\v_1.png" />
+    <Content Include="site-files\images\v_2.png" />
+    <Content Include="site-files\images\v_3.png" />
+    <Content Include="site-files\images\v_4.png" />
+    <Content Include="site-files\images\v_5.png" />
+    <Content Include="site-files\images\v_6.png" />
+    <Content Include="site-files\js\bootstrap-scrollspy.js" />
+    <Content Include="site-files\js\jquery-1.11.3.min.js" />
+    <Content Include="site-files\js\jquery-1.7.2.min.js" />
+    <Content Include="site-files\js\jquery-1.js" />
+    <Content Include="site-files\js\jquery-1_002.js" />
+    <Content Include="site-files\js\jquery-packed.js" />
+    <Content Include="site-files\js\jquery.idtabs.pack.js" />
+    <Content Include="site-files\js\jquery.index.js" />
+    <Content Include="site-files\js\jquery.js" />
+    <Content Include="site-files\js\jquery_002.js" />
+    <Content Include="site-files\js\lf_site_script.js" />
+    <Content Include="site-files\js\main.js" />
+    <Content Include="site-files\js\move-top.js" />
+    <Content Include="site-files\js\pureslider.js" />
+    <Content Include="site-files\js\query-packed.js" />
+    <Content Include="Tour.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login1.aspx.cs">
+      <DependentUpon>Login1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login1.aspx.designer.cs">
+      <DependentUpon>Login1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminM.Master.cs">
+      <DependentUpon>AdminM.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminM.Master.designer.cs">
+      <DependentUpon>AdminM.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CreateSchedule.aspx.cs">
+      <DependentUpon>CreateSchedule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CreateSchedule.aspx.designer.cs">
+      <DependentUpon>CreateSchedule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CreateVessles.aspx.cs">
+      <DependentUpon>CreateVessles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CreateVessles.aspx.designer.cs">
+      <DependentUpon>CreateVessles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageFleet.aspx.cs">
+      <DependentUpon>ManageFleet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageFleet.aspx.designer.cs">
+      <DependentUpon>ManageFleet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageShipment.aspx.cs">
+      <DependentUpon>ManageShipment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageShipment.aspx.designer.cs">
+      <DependentUpon>ManageShipment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Shipment.aspx.cs">
+      <DependentUpon>Shipment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Shipment.aspx.designer.cs">
+      <DependentUpon>Shipment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ShippingCost.aspx.cs">
+      <DependentUpon>ShippingCost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ShippingCost.aspx.designer.cs">
+      <DependentUpon>ShippingCost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Site3.Master.cs">
+      <DependentUpon>Site3.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Site3.Master.designer.cs">
+      <DependentUpon>Site3.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\TrackShipMent.aspx.cs">
+      <DependentUpon>TrackShipMent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\TrackShipMent.aspx.designer.cs">
+      <DependentUpon>TrackShipMent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.designer.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.designer.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cruises.aspx.cs">
+      <DependentUpon>cruises.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cruises.aspx.designer.cs">
+      <DependentUpon>cruises.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CustomerM.Master.cs">
+      <DependentUpon>CustomerM.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\CustomerM.Master.designer.cs">
+      <DependentUpon>CustomerM.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CustomerM1.Master.cs">
+      <DependentUpon>CustomerM1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\CustomerM1.Master.designer.cs">
+      <DependentUpon>CustomerM1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\MakePayment.aspx.cs">
+      <DependentUpon>MakePayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\MakePayment.aspx.designer.cs">
+      <DependentUpon>MakePayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\TrackShipMent.aspx.cs">
+      <DependentUpon>TrackShipMent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\TrackShipMent.aspx.designer.cs">
+      <DependentUpon>TrackShipMent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataConnection.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Destinations.aspx.cs">
+      <DependentUpon>Destinations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Destinations.aspx.designer.cs">
+      <DependentUpon>Destinations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginN.aspx.cs">
+      <DependentUpon>LoginN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginN.aspx.designer.cs">
+      <DependentUpon>LoginN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Partner\AddPrepaidCustomer.aspx.cs">
+      <DependentUpon>AddPrepaidCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Partner\AddPrepaidCustomer.aspx.designer.cs">
+      <DependentUpon>AddPrepaidCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Partner\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Partner\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Partner\PartnerM.Master.cs">
+      <DependentUpon>PartnerM.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Partner\PartnerM.Master.designer.cs">
+      <DependentUpon>PartnerM.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Partner\AddCustomer.aspx.cs">
+      <DependentUpon>AddCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Partner\AddCustomer.aspx.designer.cs">
+      <DependentUpon>AddCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Partner\CreateShipment.aspx.cs">
+      <DependentUpon>CreateShipment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Partner\CreateShipment.aspx.designer.cs">
+      <DependentUpon>CreateShipment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Partner\PartnerM1.Master.cs">
+      <DependentUpon>PartnerM1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Partner\PartnerM1.Master.designer.cs">
+      <DependentUpon>PartnerM1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Partner\Shipment.aspx.cs">
+      <DependentUpon>Shipment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Partner\Shipment.aspx.designer.cs">
+      <DependentUpon>Shipment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Partner\Customers.aspx.cs">
+      <DependentUpon>Customers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Partner\Customers.aspx.designer.cs">
+      <DependentUpon>Customers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Partner\TrackShipMent.aspx.cs">
+      <DependentUpon>TrackShipMent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Partner\TrackShipMent.aspx.designer.cs">
+      <DependentUpon>TrackShipMent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShippingOffers.aspx.cs">
+      <DependentUpon>ShippingOffers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShippingOffers.aspx.designer.cs">
+      <DependentUpon>ShippingOffers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Tour.aspx.cs">
+      <DependentUpon>Tour.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tour.aspx.designer.cs">
+      <DependentUpon>Tour.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Master" />
+    <Content Include="site-files\images\Thumbs.db" />
+    <Content Include="site-files\Thumbs.db" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:47109/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
